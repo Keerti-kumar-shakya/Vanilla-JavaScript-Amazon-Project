@@ -1,4 +1,4 @@
-
+import { cart } from "../data/cart";
 const displayProduct = document.querySelector('.js-products-grid');
 
 let productsHTML = '';
