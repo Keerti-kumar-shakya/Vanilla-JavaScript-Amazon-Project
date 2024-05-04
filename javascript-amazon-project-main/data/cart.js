@@ -8,9 +8,17 @@ export const cart = [{ // this technique call the de-duplicating the data or nor
 }
 ];
 
-
 export function addToCart(productId) {
   let matchingItem;
+
+const quantitySelector = document.querySelector(`.js-quantity-selector-${productId}`);
+
+console.log(quantitySelector);
+
+const quantity = Number(quantitySelector.value);
+
+console.log(quantity);
+
 
 cart.forEach( (cartItem) =>{
   if (productId === cartItem.productId) {
@@ -19,12 +27,12 @@ cart.forEach( (cartItem) =>{
 })
 
 if (matchingItem) {
-  matchingItem.quantity++; 
+  matchingItem.quantity += quantity; 
 }
 else{
   cart.push({
-    productId:productId,
-    quantity: 1
+    productId,
+    quantity
   })
 }
 }
