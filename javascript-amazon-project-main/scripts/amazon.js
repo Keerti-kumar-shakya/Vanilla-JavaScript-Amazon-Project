@@ -83,8 +83,10 @@ cart.forEach( (cartItem) =>{
 console.log(cartQuantity);
 
 document.querySelector('.js-cart-quantity').innerHTML = cartQuantity;
+
 }
 
+updateCartQuantity() 
 
 document.querySelectorAll('.js-add-to-cart').forEach( (button) =>{
   // console.log(button);
